@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header and Navigation Section -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><i class="fa-solid fa-book-open"></i> Book Haven</a>
+            <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" id="wishlistOpen"><i class="fa-solid fa-heart"></i><span id="wishlistCount">0</span></button>
+                <button class="icon-btn" id="cartOpen"><i class="fa-solid fa-cart-shopping"></i><span id="cartCount">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Banner Section -->
+        <section class="page-banner">
+            <h1>Contact Us</h1>
+            <p>Have a question about books or orders? Send us a message.</p>
+        </section>
+
+        <!-- Contact Form and Details Section -->
+        <section class="section contact-layout">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p><i class="fa-solid fa-location-dot"></i> Main Market, Lahore, Pakistan</p>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-envelope"></i> support@bookhaven.com</p>
+                <div class="social-links contact-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="contactName" placeholder="Full Name">
+                <input type="email" id="contactEmail" placeholder="Email Address">
+                <input type="text" id="contactSubject" placeholder="Subject">
+                <textarea id="contactMessage" placeholder="Your Message"></textarea>
+                <button type="submit" class="primary-btn">Send Message</button>
+                <p class="form-message" id="contactFormMessage"></p>
+            </form>
+        </section>
+
+        <!-- Location Section -->
+        <section class="section light-section">
+            <div class="section-heading">
+                <p>Our Location</p>
+                <h2>Visit Our Store</h2>
+            </div>
+            <div class="map-box">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <p>Map Placeholder - Book Haven, Lahore, Pakistan</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Reusable Cart, Wishlist, Checkout Panels -->
+    <aside class="side-panel" id="cartPanel"><div class="panel-header"><h3>Your Cart</h3><button class="close-btn" id="cartClose">&times;</button></div><div id="cartItems"></div><div class="panel-total"><p>Total: <strong id="cartTotal">Rs 0</strong></p><button class="primary-btn full-btn" id="checkoutOpen">Checkout</button></div></aside>
+    <aside class="side-panel" id="wishlistPanel"><div class="panel-header"><h3>Your Wishlist</h3><button class="close-btn" id="wishlistClose">&times;</button></div><div id="wishlistItems"></div></aside>
+    <section class="modal" id="checkoutModal"><div class="modal-box"><button class="close-btn modal-close" id="checkoutClose">&times;</button><h2>Checkout</h2><div class="checkout-summary" id="checkoutSummary"></div><form id="checkoutForm" class="checkout-form"><input type="text" id="customerName" placeholder="Full Name"><input type="text" id="customerPhone" placeholder="Phone Number"><input type="email" id="customerEmail" placeholder="Email Address"><textarea id="customerAddress" placeholder="Complete Address"></textarea><input type="text" id="customerCity" placeholder="City"><div class="payment-box"><p>Select Payment Method</p><label><input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery</label><label><input type="radio" name="payment" value="EasyPaisa"> EasyPaisa</label><label><input type="radio" name="payment" value="JazzCash"> JazzCash</label><label><input type="radio" name="payment" value="Bank Transfer"> Bank Transfer</label></div><button type="submit" class="primary-btn full-btn">Confirm Order</button><p class="form-message" id="checkoutMessage"></p></form></div></section>
+
+    <!-- Footer Section -->
+    <footer class="footer"><div class="footer-grid"><div><h3>Book Haven</h3><p>Your trusted online bookstore for knowledge, stories and learning.</p></div><div><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="contact.html">Contact</a></div><div><h4>Contact</h4><p>Lahore, Pakistan</p><p>+92 300 1234567</p><p>support@bookhaven.com</p></div><div><h4>Follow Us</h4><div class="social-links"><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div></div><p class="copy">&copy; 2026 Book Haven. All Rights Reserved.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

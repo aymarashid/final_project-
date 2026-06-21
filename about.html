@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven | About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header and Navigation Section -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><i class="fa-solid fa-book-open"></i> Book Haven</a>
+            <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" id="wishlistOpen"><i class="fa-solid fa-heart"></i><span id="wishlistCount">0</span></button>
+                <button class="icon-btn" id="cartOpen"><i class="fa-solid fa-cart-shopping"></i><span id="cartCount">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Banner Section -->
+        <section class="page-banner">
+            <h1>About Book Haven</h1>
+            <p>A place where readers discover knowledge, imagination and inspiration.</p>
+        </section>
+
+        <!-- Company Introduction Section -->
+        <section class="section about-layout">
+            <div>
+                <p class="small-title">Our Story</p>
+                <h2>Bringing Books Closer To Everyone</h2>
+                <p>Book Haven started with a simple idea: make books easy to find and affordable for students, readers and families. We provide educational, fiction, Islamic, technology and children’s books in one friendly online store.</p>
+                <p>Our goal is to create a comfortable shopping experience where customers can browse, save books to wishlist, add items to cart and checkout easily.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80" alt="Library shelves">
+        </section>
+
+        <!-- Mission and Vision Section -->
+        <section class="section light-section">
+            <div class="mission-grid">
+                <article class="info-card">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To provide quality books at affordable prices with a simple and reliable online shopping experience.</p>
+                </article>
+                <article class="info-card">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To become a trusted bookstore that supports learning, reading habits and personal growth.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section">
+            <div class="section-heading">
+                <p>Our Benefits</p>
+                <h2>Why Choose Us</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="info-card"><i class="fa-solid fa-tags"></i><h3>Affordable Prices</h3><p>Books for every budget with student-friendly pricing.</p></article>
+                <article class="info-card"><i class="fa-solid fa-truck-fast"></i><h3>Fast Delivery</h3><p>Quick and safe delivery across major cities.</p></article>
+                <article class="info-card"><i class="fa-solid fa-book"></i><h3>Large Collection</h3><p>Multiple categories for all types of readers.</p></article>
+                <article class="info-card"><i class="fa-solid fa-shield-heart"></i><h3>Trusted Service</h3><p>Reliable support and smooth checkout process.</p></article>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section light-section">
+            <div class="section-heading">
+                <p>Meet Our Team</p>
+                <h2>People Behind Book Haven</h2>
+            </div>
+            <div class="team-grid">
+                <article class="team-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Team member"><h3>Ahmed Khan</h3><p>Store Manager</p></article>
+                <article class="team-card"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Team member"><h3>Sara Ali</h3><p>Book Curator</p></article>
+                <article class="team-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Team member"><h3>Usman Rauf</h3><p>Customer Support</p></article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Reusable Cart, Wishlist, Checkout Panels -->
+    <aside class="side-panel" id="cartPanel"><div class="panel-header"><h3>Your Cart</h3><button class="close-btn" id="cartClose">&times;</button></div><div id="cartItems"></div><div class="panel-total"><p>Total: <strong id="cartTotal">Rs 0</strong></p><button class="primary-btn full-btn" id="checkoutOpen">Checkout</button></div></aside>
+    <aside class="side-panel" id="wishlistPanel"><div class="panel-header"><h3>Your Wishlist</h3><button class="close-btn" id="wishlistClose">&times;</button></div><div id="wishlistItems"></div></aside>
+    <section class="modal" id="checkoutModal"><div class="modal-box"><button class="close-btn modal-close" id="checkoutClose">&times;</button><h2>Checkout</h2><div class="checkout-summary" id="checkoutSummary"></div><form id="checkoutForm" class="checkout-form"><input type="text" id="customerName" placeholder="Full Name"><input type="text" id="customerPhone" placeholder="Phone Number"><input type="email" id="customerEmail" placeholder="Email Address"><textarea id="customerAddress" placeholder="Complete Address"></textarea><input type="text" id="customerCity" placeholder="City"><div class="payment-box"><p>Select Payment Method</p><label><input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery</label><label><input type="radio" name="payment" value="EasyPaisa"> EasyPaisa</label><label><input type="radio" name="payment" value="JazzCash"> JazzCash</label><label><input type="radio" name="payment" value="Bank Transfer"> Bank Transfer</label></div><button type="submit" class="primary-btn full-btn">Confirm Order</button><p class="form-message" id="checkoutMessage"></p></form></div></section>
+
+    <!-- Footer Section -->
+    <footer class="footer"><div class="footer-grid"><div><h3>Book Haven</h3><p>Your trusted online bookstore for knowledge, stories and learning.</p></div><div><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="contact.html">Contact</a></div><div><h4>Contact</h4><p>Lahore, Pakistan</p><p>+92 300 1234567</p><p>support@bookhaven.com</p></div><div><h4>Follow Us</h4><div class="social-links"><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div></div><p class="copy">&copy; 2026 Book Haven. All Rights Reserved.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

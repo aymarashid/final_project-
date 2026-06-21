@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header and Navigation Section -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><i class="fa-solid fa-book-open"></i> Book Haven</a>
+            <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" id="wishlistOpen"><i class="fa-solid fa-heart"></i><span id="wishlistCount">0</span></button>
+                <button class="icon-btn" id="cartOpen"><i class="fa-solid fa-cart-shopping"></i><span id="cartCount">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="small-title">Welcome to Book Haven</p>
+                <h1>Find Your Next Favorite Book</h1>
+                <p>Explore fiction, educational books, Islamic books, technology books and more at affordable prices in Pakistan.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="primary-btn">Shop Now</a>
+                    <a href="#featured" class="secondary-btn">Explore Books</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Books Section -->
+        <section class="section" id="featured">
+            <div class="section-heading">
+                <p>Handpicked Books</p>
+                <h2>Featured Books</h2>
+            </div>
+            <div class="book-grid featured-books"></div>
+        </section>
+
+        <!-- Best Sellers Section -->
+        <section class="section light-section">
+            <div class="section-heading">
+                <p>Readers Love These</p>
+                <h2>Best Sellers</h2>
+            </div>
+            <div class="book-grid best-books"></div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section class="section">
+            <div class="section-heading">
+                <p>Fresh Collection</p>
+                <h2>New Arrivals</h2>
+            </div>
+            <div class="book-grid new-books"></div>
+        </section>
+
+        <!-- Promotional Offer Section -->
+        <section class="offer-section">
+            <div>
+                <p>Limited Time Offer</p>
+                <h2>Get 20% Off On Educational Books</h2>
+                <p>Upgrade your learning with affordable study books and helpful guides.</p>
+            </div>
+            <a href="products.html" class="primary-btn">Buy Now</a>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <div class="section-heading">
+                <p>Customer Reviews</p>
+                <h2>What Readers Say</h2>
+            </div>
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <p>"Book Haven has a clean website and the prices are very reasonable. I ordered my semester books easily."</p>
+                    <h4>Ali Raza</h4>
+                </article>
+                <article class="testimonial-card">
+                    <p>"I like the wishlist feature because I can save books and buy them later. Very useful for students."</p>
+                    <h4>Hina Ahmed</h4>
+                </article>
+                <article class="testimonial-card">
+                    <p>"Fast delivery and good book quality. The categories make browsing simple."</p>
+                    <h4>Saad Khan</h4>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <h2>Subscribe for Book Updates</h2>
+            <p>Get updates about new arrivals, discounts and best-selling books.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="form-message" id="newsletterMessage"></p>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <aside class="side-panel" id="cartPanel">
+        <div class="panel-header">
+            <h3>Your Cart</h3>
+            <button class="close-btn" id="cartClose">&times;</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="panel-total">
+            <p>Total: <strong id="cartTotal">Rs 0</strong></p>
+            <button class="primary-btn full-btn" id="checkoutOpen">Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Wishlist Sidebar -->
+    <aside class="side-panel" id="wishlistPanel">
+        <div class="panel-header">
+            <h3>Your Wishlist</h3>
+            <button class="close-btn" id="wishlistClose">&times;</button>
+        </div>
+        <div id="wishlistItems"></div>
+    </aside>
+
+    <!-- Checkout Modal -->
+    <section class="modal" id="checkoutModal">
+        <div class="modal-box">
+            <button class="close-btn modal-close" id="checkoutClose">&times;</button>
+            <h2>Checkout</h2>
+            <div class="checkout-summary" id="checkoutSummary"></div>
+            <form id="checkoutForm" class="checkout-form">
+                <input type="text" id="customerName" placeholder="Full Name">
+                <input type="text" id="customerPhone" placeholder="Phone Number">
+                <input type="email" id="customerEmail" placeholder="Email Address">
+                <textarea id="customerAddress" placeholder="Complete Address"></textarea>
+                <input type="text" id="customerCity" placeholder="City">
+                <div class="payment-box">
+                    <p>Select Payment Method</p>
+                    <label><input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery</label>
+                    <label><input type="radio" name="payment" value="EasyPaisa"> EasyPaisa</label>
+                    <label><input type="radio" name="payment" value="JazzCash"> JazzCash</label>
+                    <label><input type="radio" name="payment" value="Bank Transfer"> Bank Transfer</label>
+                </div>
+                <button type="submit" class="primary-btn full-btn">Confirm Order</button>
+                <p class="form-message" id="checkoutMessage"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Book Haven</h3>
+                <p>Your trusted online bookstore for knowledge, stories and learning.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Lahore, Pakistan</p>
+                <p>+92 300 1234567</p>
+                <p>support@bookhaven.com</p>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="copy">&copy; 2026 Book Haven. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
